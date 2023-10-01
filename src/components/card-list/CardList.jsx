@@ -13,8 +13,18 @@ const CardList = ({ cards }) => {
 
   return (
     <section className={styles.cardListCntr}>
-      {cards.map(({ mal_id, ...card }) => {
-        return <Card key={mal_id} {...card} />;
+      {cards.map(({ mal_id, images, url, title, synopsis }) => {
+        const { image_url, small_image_url } = images?.jpg ?? {};
+        return (
+          <Card
+            key={mal_id}
+            imgSrc={image_url}
+            iconImgSrc={small_image_url}
+            title={title}
+            synopsis={synopsis}
+            url={url}
+          />
+        );
       })}
     </section>
   );

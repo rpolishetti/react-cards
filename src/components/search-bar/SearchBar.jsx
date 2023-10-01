@@ -26,7 +26,7 @@ const SearchBar = ({ setCards }) => {
   };
 
   return (
-    <section style={{ width: '400px' }} className="my-6">
+    <section style={{ width: '400px' }} className="my-5">
       <h1 className="title is-size-2">Search</h1>
       <input
         ref={inputRef}
