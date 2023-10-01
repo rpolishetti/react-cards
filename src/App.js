@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import CardList from './components/card-list/CardList';
+import SearchBar from './components/search-bar/SearchBar';
 
-function App() {
+export default () => {
+  const [cards, setCards] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section style={{ minHeight: '50rem' }} className="container">
+      <SearchBar setCards={setCards} />
+      <CardList cards={cards} />
+    </section>
   );
-}
-
-export default App;
+};
