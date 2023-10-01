@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Card from '../Card';
 import styles from './CardList.module.css';
 
-export default ({ cards }) => {
-  console.log(cards);
-
+const CardList = ({ cards }) => {
   if (!cards.length)
     return (
       <p>
@@ -15,9 +13,15 @@ export default ({ cards }) => {
 
   return (
     <section className={styles.cardListCntr}>
-      {cards.map((card) => {
-        return <Card {...card} />;
+      {cards.map(({ mal_id, ...card }) => {
+        return <Card key={mal_id} {...card} />;
       })}
     </section>
   );
 };
+
+CardList.propTypes = {
+  cards: PropTypes.array,
+};
+
+export default CardList;

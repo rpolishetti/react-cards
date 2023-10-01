@@ -6,7 +6,7 @@ export default () => {
   const [cards, setCards] = useState([]);
 
   return (
-    <section style={{ minHeight: '50rem' }} className="container">
+    <section className="container">
       <SearchBar setCards={setCards} />
       <CardList cards={cards} />
     </section>
