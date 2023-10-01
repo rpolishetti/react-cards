@@ -13,11 +13,17 @@ const Card = ({ url, imgSrc, iconImgSrc, title, synopsis }) => {
         <div className="media">
           <div className="media-left">
             <figure className="image is-48x48">
-              <img src={iconImgSrc} alt={title} />
+              <img
+                src={iconImgSrc}
+                alt={title}
+                style={{ aspectRatio: '1/1.2' }}
+              />
             </figure>
           </div>
           <div className="media-content">
-            <p className="title is-4">{title}</p>
+            <p className="subtitle is-4 is-size-6 has-text-weight-medium">
+              {title}
+            </p>
             {/* <p className="subtitle is-6">@johnsmith</p> */}
           </div>
         </div>

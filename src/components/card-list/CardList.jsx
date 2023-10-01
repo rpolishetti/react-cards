@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import Card from '../Card';
 import styles from './CardList.module.css';
 
-const CardList = ({ cards }) => {
-  if (!cards.length)
+const CardList = ({ cards, cardsLoading }) => {
+  if (cardsLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (!cards.length && !cardsLoading)
     return (
       <p>
         No results found or no search input found. Please refine your search.
