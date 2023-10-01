@@ -1,14 +1,14 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import debounce from 'lodash/debounce';
-import axios from 'axios';
-import CardList from './components/card-list/CardList';
-import SearchBar from './components/search-bar/SearchBar';
-import { FETCH_BASE_PATH } from './constants';
+import React, { useState, useCallback, useEffect } from "react";
+import debounce from "lodash/debounce";
+import axios from "axios";
+import CardList from "./components/card-list/CardList";
+import SearchBar from "./components/search-bar/SearchBar";
+import { FETCH_BASE_PATH } from "./constants";
 
 export default () => {
   const [cards, setCards] = useState([]);
   const [cardsLoading, setCardsLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   /*This would be really a fancy use case of useCallback. If we dont use it, every render will give us a new debounced function, which will not serve our purpose*/
   const fetchCards = useCallback(
@@ -36,7 +36,7 @@ export default () => {
   };
 
   return (
-    <section className="container mx-6">
+    <section className="container p-2">
       <SearchBar onSearchInput={onSearchInput} />
       <CardList cards={cards} cardsLoading={cardsLoading} />
     </section>
