@@ -1,3 +1,9 @@
+### Demo
+
+This app can be viewed here
+
+https://react-cards-62c873b847aa.herokuapp.com/
+
 In the project directory, you can run:
 
 ### `npm start`
@@ -45,9 +51,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### Demo
-
-This app can be viewed here
-
-https://react-cards-62c873b847aa.herokuapp.com/
