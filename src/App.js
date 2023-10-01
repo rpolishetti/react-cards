@@ -36,7 +36,7 @@ export default () => {
   };
 
   return (
-    <section className="container">
+    <section className="container mx-6">
       <SearchBar onSearchInput={onSearchInput} />
       <CardList cards={cards} cardsLoading={cardsLoading} />
     </section>
